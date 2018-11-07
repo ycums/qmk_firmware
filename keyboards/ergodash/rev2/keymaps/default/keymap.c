@@ -38,21 +38,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B, XXXXX,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,         LALT, EISU2,   SPC, XXXXX,        XXXXX,   ENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        EISU2,  LALT,   SPC, XXXXX,        XXXXX,   ENT,  RALT, KANA2,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
   [_LOWER] = LAYOUT_kc( \
   //,------------------------------------------------.                    ,------------------------------------------------.
-        ESC,    F1,    F2,    F3,    F4,    F5, XXXXX,                      XXXXX,   F6,     F7,    F8,    F9,   F10, XXXXX,\
+        ESC,    F1,    F2,    F3,    F4,    F5, XXXXX,                      XXXXX,   F6,     F7,    F8,    F9, MINUS, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-        TAB,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX,  AMPR,  ASTR,  LPRN,  RPRN,  BSPC,  BSPC,\
+       TILD,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX,  CIRC,  AMPR,  ASTR,  LPRN,  RPRN,   DEL,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      CTLTB,     A,     S,     D,     F,     G, XXXXX,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
+      CTLTB,    F1,    F2,    F3,    F4,    F5, XXXXX,                      XXXXX, XXXXX,  MINS,   EQL,  LBRC,  RBRC,  BSLS,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B, XXXXX,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
+       LSFT,    F6,    F7,    F8,    F9,   F10, XXXXX,                       XXXXX,     N,  UNDS,  PLUS,  LCBR,  RCBR,  PIPE,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,         LALT, EISU2,   SPC, XXXXX,        XXXXX,   ENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        EISU2,  LALT,   SPC, XXXXX,        XXXXX,   ENT,  RALT, KANA2,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -60,13 +60,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,------------------------------------------------.                    ,------------------------------------------------.
         ESC,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,    6,      7,     8,     9,     0, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-        TAB,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX,  HOME,  PGDN,  PGUP,   END,  BSPC,  BSPC,\
+        GRV,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX,  HOME,  PGDN,  PGUP,   END,  BSPC,  BSPC,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      CTLTB,     A,     S,     D,     F,     G, XXXXX,                      XXXXX,  LEFT,  DOWN,    UP, RIGHT,  SCLN,  QUOT,\
+      CTLTB,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,  LEFT,  DOWN,    UP, RIGHT,  SCLN,  QUOT,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B, XXXXX,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
+       LSFT,     6,     7,     8,     9,     0, XXXXX,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,         LALT, EISU2,   SPC, XXXXX,        XXXXX,   ENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        EISU2,  LALT,   SPC, XXXXX,        XXXXX,   ENT,  RALT, KANA2,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
