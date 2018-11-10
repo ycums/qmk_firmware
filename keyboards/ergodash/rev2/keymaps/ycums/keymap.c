@@ -22,12 +22,15 @@ enum custom_keycodes {
 #define XXXXXXX KC_NO
 #define KC______ KC_TRNS
 #define KC_XXXXX KC_NO
+
 #define KC_RAISE RAISE
 #define KC_LOWER LOWER
+
 #define KC_CTLTB CTL_T(KC_TAB)
 #define KC_EISU2 LT(_LOWER,KC_MHEN)
 #define KC_KANA2 LT(_RAISE,KC_HENK)
 #define KC_SFENT SFT_T(KC_ENT)
+
 struct keymap
 {
   /* data */
@@ -38,57 +41,57 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_QWERTY] = LAYOUT_kc( \
   //,------------------------------------------------.                    ,------------------------------------------------.
-        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, MINUS, XXXXX,\
+        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-        TAB,     Q,     W,     E,     R,     T, XXXXX,                      XXXXX,     Y,     U,     I,     O,     P,  BSPC,\
+        TAB,     Q,     W,     E,     R,     T, XXXXX,                      XXXXX,     Y,     U,     I,     O,     P, MINUS,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       CTLTB,     A,     S,     D,     F,     G, XXXXX,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B, XXXXX,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, KANA2, XXXXX,         LALT, EISU2,   SPC, XXXXX,        XXXXX, SFENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, KANA2,         LALT, EISU2,   SPC, XXXXX,        XXXXX, SFENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
   [_LOWER] = LAYOUT_kc( \
   //,------------------------------------------------.                    ,------------------------------------------------.
-        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, MINUS, XXXXX,\
+      _____, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       GRV,     F1,    F2,    F3,    F4,    F5, XXXXX,                      XXXXX,  CIRC,  AMPR,  ASTR,  LPRN,  RPRN,   DEL,\
+      _____, _____, _____,   END, _____, _____, XXXXX,                      XXXXX,     6,     7,     8,     9,     0,    UP,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      CTLTB,    F6,    F7,    F8,    F9,   F10, XXXXX,                      XXXXX, XXXXX,  MINS,   EQL,  LBRC,  RBRC,  BSLS,\
+      _____,  HOME, _____,   DEL, RIGHT, _____, XXXXX,                      XXXXX,  BSPC, _____, _____,  LBRC,  RBRC, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       LSFT,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX, _____,  UNDS,  PLUS,  LCBR,  RCBR,  PIPE,\
+      _____, _____, _____, _____, _____,  LEFT, XXXXX,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, KANA2, XXXXX,         LALT, LOWER,   SPC, XXXXX,        XXXXX, SFENT, RAISE,  RALT,        XXXXX, XXXXX, XXXXX \
+      _____, _____, _____,        _____, LOWER, _____, XXXXX,        XXXXX, _____, RAISE , _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
   [_RAISE] = LAYOUT_kc( \
   //,------------------------------------------------.                    ,------------------------------------------------.
-        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, MINUS, XXXXX,\
+      _____, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       TILD,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,  HOME,  PGDN,  PGUP,   END,  BSPC,  BSPC,\
+      _____,      1,    2,     3,     4,    5,  XXXXX,                      XXXXX, _____, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      CTLTB,     6,     7,     8,     9,     0, XXXXX,                      XXXXX,  LEFT,  DOWN,    UP, RIGHT,  SCLN,  QUOT,\
+      _____, _____, _____, _____, _____, _____, XXXXX,                      XXXXX, _____, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       LSFT,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX, _____, _____,  COMM,   DOT,  SLSH,  RSFT,\
+      _____, _____, _____, _____, _____, _____, XXXXX,                      XXXXX, _____, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, KANA2, XXXXX,         LALT, LOWER,   SPC, XXXXX,        XXXXX, SFENT, RAISE,  RALT,        XXXXX, XXXXX, XXXXX \
+      _____, _____, _____,        _____, LOWER, _____, XXXXX,        XXXXX, _____, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
   [_ADJUST] = LAYOUT_kc(
-   //,------------------------------------------------.                    ,------------------------------------------------.
-        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, MINUS, XXXXX,\
+  //,------------------------------------------------.                    ,------------------------------------------------.
+      _____, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       TILD,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,     6,     7,     8,     9,     0,  BSPC,\
+      _____,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,     6,     7,     8,     9,     0, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      CTLTB,     6,     7,     8,     9,     0, XXXXX,                      XXXXX, _____,     4,     5,     6, _____,  QUOT,\
+      _____, _____, _____, _____, _____, _____, XXXXX,                      XXXXX, _____,     4,     5,     6, _____, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-       LSFT,  EXLM,    AT,  HASH,   DLR,  PERC, XXXXX,                      XXXXX, _____,     1,     2,     3, _____,  RSFT,\
+      _____, _____, _____, _____, _____, _____, XXXXX,                      XXXXX, _____,     1,     2,     3, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, KANA2, XXXXX,         LALT, LOWER,   SPC, XXXXX,        XXXXX, SFENT, RAISE,  RALT,        XXXXX, XXXXX, XXXXX \
+      _____, _____, _____,        _____, LOWER, _____, XXXXX,        XXXXX, _____, RAISE , _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   )
 };
