@@ -28,8 +28,9 @@ enum custom_keycodes {
 
 #define KC_CTLTB CTL_T(KC_TAB)
 // #define KC_EISU2 LT(_LOWER,KC_MHEN)
-#define KC_EISU2 CTL_T(KC_MHEN)
-#define KC_KANA2 LT(_RAISE,KC_HENK)
+#define KC_EISU1 LT(_LAYR1, KC_MHEN)
+#define KC_EISU2 LT(_LOWER, KC_MHEN)
+#define KC_KANA2 LT(_RAISE, KC_HENK)
 #define KC_SFENT SFT_T(KC_ENT)
 #define KC_CTRLZ LCTL(KC_Z)
 #define KC_CTRLX LCTL(KC_X)
@@ -43,7 +44,9 @@ enum custom_keycodes {
 #define KC_CTRLL LCTL(KC_L)
 #define KC_CTRLT LCTL(KC_T)
 #define KC_CTREN LCTL(KC_ENT)
-#define KC_ALTF4 LCTL(KC_F)
+#define KC_CTRTB LCTL(KC_TAB)
+#define KC_CTRAL LCTL(KC_LALT)
+#define KC_ALTF4 LALT(KC_F4)
 
 struct keymap
 {
@@ -58,24 +61,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
         TAB,     Q,     W,     E,     R,     T, XXXXX,                      XXXXX,     Y,     U,     I,     O,     P, MINUS,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      LAYR1,     A,     S,     D,     F,     G, XXXXX,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
+      LCTRL,     A,     S,     D,     F,     G, XXXXX,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B, KANA2,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,         LALT, EISU2,   SPC, LOWER,        XXXXX, SFENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,         LALT, EISU1, EISU2, SPACE,        XXXXX, SFENT, KANA2,  RALT,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LAYR1] = LAYOUT_kc( \
   //,------------------------------------------------.                    ,------------------------------------------------.
       _____, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      _____, ALTF4, CTRLW,   END, _____, CTRLT, XXXXX,                      XXXXX, _____, _____, _____, _____, _____,    UP,\
+      CTRTB, ALTF4, CTRLW,   END, _____, CTRLT, XXXXX,                      XXXXX, _____, _____, _____, _____, _____,    UP,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      LAYR1,  HOME, CTRLS,   DEL, RIGHT, CTRLF, XXXXX,                      XXXXX,  BSPC, _____, _____, CTRLL, _____, _____,\
+      LCTRL,  HOME, CTRLS,   DEL, RIGHT, CTRLF, XXXXX,                      XXXXX,  BSPC, _____, _____, CTRLL, _____, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,        _____, LCTRL, _____, _____,        XXXXX, CTREN, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        CTRAL, LAYR1, LOWER, _____,        XXXXX, CTREN, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LOWER] = LAYOUT_kc( \
@@ -84,11 +87,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       GRAVE,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,     6,     7,     8,     9,     0,    UP,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      LAYR1,  HOME, CTRLS,   DEL, RIGHT, CTRLF, XXXXX,                      XXXXX,  BSPC, MINUS,   EQL,  LBRC,  RBRC,  BSLS,\
+      LCTRL,  HOME, CTRLS,   DEL, RIGHT, CTRLF, XXXXX,                      XXXXX,  BSPC, MINUS,   EQL,  LBRC,  RBRC,  BSLS,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,        _____, LCTRL, _____, _____,        XXXXX, _____, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        _____, LAYR1, LOWER, _____,        XXXXX, SFENT, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -98,11 +101,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       GRAVE,     1,     2,     3,     4,     5, XXXXX,                      XXXXX,     6,     7,     8,     9,     0,    UP,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      LAYR1,  HOME, CTRLS,   DEL, RIGHT, _____, XXXXX,                      XXXXX,  BSPC, MINUS,    UP,  LBRC,  RBRC,  BSLS,\
+      LCTRL,  HOME, CTRLS,   DEL, RIGHT, _____, XXXXX,                      XXXXX,  BSPC, MINUS,    UP,  LBRC,  RBRC,  BSLS,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN,  LEFT,  DOWN, RIGHT, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LGUI, XXXXX, XXXXX,        _____, LCTRL, _____, _____,        XXXXX, _____, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+       LGUI, XXXXX, XXXXX,        _____, LAYR1, LOWER, _____,        XXXXX, SFENT, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
