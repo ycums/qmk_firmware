@@ -18,7 +18,6 @@ enum custom_keycodes {
   ADJUST,
 };
 
-
 // Fillers to make layering more clear
 #define KC______ KC_TRNS
 #define KC_XXXXX KC_NO
@@ -47,14 +46,23 @@ enum custom_keycodes {
 #define KC_CTRTB LCTL(KC_TAB)
 #define KC_CTRAL LCTL(KC_LALT)
 #define KC_ALTF4 LALT(KC_F4)
-#define KC_RGBTOG RGB_TOG
-#define KC_RGBMOD RGB_MOD
-#define KC_RGBHUD RGB_HUD
-#define KC_RGBHUI RGB_HUI
-#define KC_RGBSAD RGB_SAD
-#define KC_RGBSAI RGB_SAI
-#define KC_RGBVAD RGB_VAD
-#define KC_RGBVAI RGB_VAI
+#define KC_ELTOG RGB_TOG
+#define KC_ELMOD RGB_MOD
+#define KC_ELHUD RGB_HUD
+#define KC_ELHUI RGB_HUI
+#define KC_ELSAD RGB_SAD
+#define KC_ELSAI RGB_SAI
+#define KC_ELVAD RGB_VAD
+#define KC_ELVAI RGB_VAI
+#define KC_ELMP_ RGB_MODE_PLAIN    // Static (no animation) mode
+#define KC_ELMB_ RGB_MODE_BREATHE  // Breathing animation mode
+#define KC_ELMR_ RGB_MODE_RAINBOW  // Rainbow animation mode
+#define KC_ELMSW RGB_MODE_SWIRL   // Swirl animation mode
+#define KC_ELMSN RGB_MODE_SNAKE   // Snake animation mode
+#define KC_ELMK_ RGB_MODE_KNIGHT   // "Knight Rider" animation mode
+#define KC_ELMX_ RGB_MODE_XMAS     // Christmas animation mode
+#define KC_ELMG_ RGB_MODE_GRADIENT // Static gradient animation mode
+#define KC_ELMT_ RGB_MODE_RGBTEST  // Red, Green, Blue test animation mode
 
 struct keymap
 {
@@ -124,9 +132,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       _____,    F1,    F2,    F3,    F4,    F5, XXXXX,                      XXXXX,    F6,    F7,    F8,    F9,   F10, _____,\
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
-      _____,  F11,    F12, _____, _____,     G, _____,                      XXXXX, _____, _____, _____, _____, _____, _____,\
+      _____,  F11,    F12, _____, _____,     G, _____,                      XXXXX, ELTOG, ELMOD, ELMP_, ELMB_, ELMR_, ELMSW,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____,RGBTOG,RGBMOD,RGBHUD,RGBHUI, _____, _____,                      XXXXX,RGBSAD,RGBSAI,RGBVAD,RGBVAI, _____, _____,\
+      _____, ELMSN, ELMK_, ELMX_, ELMG_, ELMT_, _____,                      XXXXX, ELVAI, ELVAD, ELHUI, ELHUD, ELSAI, ELSAD,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX, XXXXX, _____,        _____, _____, _____, _____,        _____, _____, _____, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -194,3 +202,54 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
+
+#define RGBLIGHT_COLOR_LAYER_QWERTY 0x00, 0x00, 0x00
+#define RGBLIGHT_COLOR_LAYER_LAYR1 0xFF, 0x00, 0x00
+#define RGBLIGHT_COLOR_LAYER_LOWER 0x00, 0xFF, 0x00
+#define RGBLIGHT_COLOR_LAYER_RAISE 0x00, 0x00, 0xFF
+#define RGBLIGHT_COLOR_LAYER_ADJUST 0x00, 0xFF, 0xFF
+
+void matrix_init_user(void)
+{
+#ifdef RGBLIGHT_COLOR_LAYER_QWERTY
+  rgblight_setrgb(RGBLIGHT_COLOR_LAYER_QWERTY);
+#endif
+};
+
+uint32_t layer_state_set_user(uint32_t state)
+{
+  state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+  uint8_t layer = biton32(state);
+  switch (layer)
+  {
+  case _QWERTY:
+#ifdef RGBLIGHT_COLOR_LAYER_QWERTY
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_QWERTY);
+#endif
+    break;
+  case _LAYR1:
+#ifdef RGBLIGHT_COLOR_LAYER_LAYR1
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_LAYR1);
+#endif
+    break;
+  case _LOWER:
+#ifdef RGBLIGHT_COLOR_LAYER_LOWER
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_LOWER);
+#endif
+    break;
+  case _RAISE:
+#ifdef RGBLIGHT_COLOR_LAYER_RAISE
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_RAISE);
+#endif
+    break;
+  case _ADJUST:
+#ifdef RGBLIGHT_COLOR_LAYER_ADJUST
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_ADJUST);
+#endif
+    break;
+
+  default:
+    break;
+  }
+  return state;
+};
