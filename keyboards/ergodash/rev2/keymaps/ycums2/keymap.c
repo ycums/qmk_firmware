@@ -205,8 +205,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 #define RGBLIGHT_COLOR_LAYER_QWERTY 0x00, 0x00, 0x00
 #define RGBLIGHT_COLOR_LAYER_LAYR1 0xFF, 0x00, 0x00
-#define RGBLIGHT_COLOR_LAYER_LOWER 0x00, 0xFF, 0x00
-#define RGBLIGHT_COLOR_LAYER_RAISE 0x00, 0x00, 0xFF
+#define RGBLIGHT_COLOR_LAYER_LOWER 0x00, 0x00, 0xFF
+#define RGBLIGHT_COLOR_LAYER_RAISE 0x00, 0xFF, 0x00
 #define RGBLIGHT_COLOR_LAYER_ADJUST 0x00, 0xFF, 0xFF
 
 void matrix_init_user(void)
