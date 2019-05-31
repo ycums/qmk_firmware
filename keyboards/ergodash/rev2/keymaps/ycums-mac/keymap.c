@@ -26,10 +26,8 @@ enum custom_keycodes {
 #define KC_LAYR1 LAYR1
 
 #define KC_CTLTB CTL_T(KC_TAB)
-// #define KC_EISU2 LT(_LOWER,KC_MHEN)
-#define KC_EISU1 LT(_LAYR1, KC_MHEN)
-#define KC_EISU2 LT(_LOWER, KC_MHEN)
-#define KC_KANA2 LT(_RAISE, KC_HENK)
+#define KC_EISU2 LT(_LOWER, KC_LANG2)
+#define KC_KANA2 LT(_RAISE, KC_LANG1)
 #define KC_SFENT SFT_T(KC_ENT)
 #define KC_CTRLZ LCTL(KC_Z)
 #define KC_CTRLX LCTL(KC_X)
@@ -81,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B, KANA2,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX, XXXXX,  LGUI,         LALT, LAYR1, EISU2, SPACE,        SFENT,  HENK, RAISE, RCTRL,        XXXXX, XXXXX, XXXXX \
+      XXXXX, XXXXX,  LGUI,         LALT,  LCMD, EISU2, SPACE,        SFENT, LANG1, RAISE,  RCMD,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LAYR1] = LAYOUT_kc( \
@@ -94,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX, XXXXX,  LGUI,        CTRAL, LAYR1, LOWER, _____,        CTREN,  HENK, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+      XXXXX, XXXXX,  LGUI,        CTRAL,  LCMD, LOWER, _____,        CTREN, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LOWER] = LAYOUT_kc( \
@@ -107,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX, XXXXX,  LGUI,        _____, LAYR1, LOWER,   ENT,        SFENT,  HENK, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+      XXXXX, XXXXX,  LGUI,        _____,  LCMD, LOWER,   ENT,        SFENT, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -121,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
       _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN,  LEFT,  DOWN, RIGHT, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX, XXXXX,  LGUI,        _____, LAYR1, LOWER, CTREN,        SFENT,  HENK, RAISE, _____,        XXXXX, XXXXX, XXXXX \
+      XXXXX, XXXXX,  LGUI,        _____,  LCMD, LOWER, CTREN,        SFENT, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
