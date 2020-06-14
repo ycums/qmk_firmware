@@ -41,5 +41,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_VAL_STEP 17
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 60
+#define TAPPING_TERM 70
 #define PERMISSIVE_HOLD
