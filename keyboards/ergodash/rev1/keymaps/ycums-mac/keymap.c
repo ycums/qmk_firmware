@@ -61,11 +61,6 @@ enum custom_keycodes {
 #define KC_ELMG_ RGB_MODE_GRADIENT // Static gradient animation mode
 #define KC_ELMT_ RGB_MODE_RGBTEST  // Red, Green, Blue test animation mode
 
-struct keymap
-{
-  /* data */
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_QWERTY] = LAYOUT_kc( \
@@ -76,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       LCTRL,     A,     S,     D,     F,     G,     H,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B, LANG2,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
+       LSFT,     Z,     X,     C,     V,     B, LANG2,                      LANG1,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX,  LALT, CMDSP,         LALT,  LCMD, LOWER, SPACE,        SFENT, LANG1, RAISE,  RCMD,        XXXXX, XXXXX, XXXXX \
+      XXXXX,  LALT, CMDSP,         LALT,  LCMD, LOWER, SPACE,        SFENT, RAISE, XXXXX, XXXXX,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LAYR1] = LAYOUT_kc( \
