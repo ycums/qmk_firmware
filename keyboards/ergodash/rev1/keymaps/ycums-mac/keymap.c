@@ -76,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       LCTRL,     A,     S,     D,     F,     G,     H,                      XXXXX,     H,     J,     K,     L,  SCLN,  QUOT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B, RAISE,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
+       LSFT,     Z,     X,     C,     V,     B, LANG2,                      XXXXX,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX,  LALT, CMDSP,         LALT,  LCMD, EISU2, SPACE,        SFENT, LANG1, RAISE,  RCMD,        XXXXX, XXXXX, XXXXX \
+      XXXXX,  LALT, CMDSP,         LALT,  LCMD, LOWER, SPACE,        SFENT, LANG1, RAISE,  RCMD,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
   [_LAYR1] = LAYOUT_kc( \
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       LCTRL,  HOME, CTRLS,   DEL, RIGHT, CTRLF,  BSPC,                      XXXXX,  BSPC, _____, _____, CTRLL, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
+      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, LANG2,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX,  LALT, CMDSP,        CTRAL,  LCMD, LOWER, _____,        CTREN, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       LCTRL,  HOME, CTRLS,   DEL,  PLUS,  LBRC,  BSPC,                      XXXXX,  RBRC, MINUS,   EQL, _____,  COLN,   DQT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, CTRLZ, CTRLX, CTRLC,   EQL,  LCBR, RAISE,                      XXXXX,  RCBR,  UNDS, _____, _____,  QUES, _____,\
+      _____, CTRLZ, CTRLX, CTRLC,   EQL,  LCBR, LANG2,                      XXXXX,  RCBR,  UNDS, _____, _____,  QUES, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX,  LALT, CMDSP,        _____,  LCMD, LOWER,   ENT,        SFENT, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       LCTRL,  HOME, CTRLS,   DEL,  PLUS,  LBRC,  BSPC,                      XXXXX,  BSPC, MINUS,    UP,  LBRC,  RBRC,  BSLS,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, RAISE,                      XXXXX,  DOWN,  LEFT,  DOWN, RIGHT, _____, _____,\
+      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT, LANG2,                      XXXXX,  DOWN,  LEFT,  DOWN, RIGHT, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX,  LALT, CMDSP,        _____,  LCMD, LOWER, CTREN,        SFENT, LANG1, RAISE, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
