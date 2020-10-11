@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B,  MHEN,                       HENK,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX,  LALT,  LGUI,         LALT, LCTRL, LOWER, SPACE,          ENT, RAISE, XXXXX, XXXXX,        XXXXX, XXXXX, XXXXX \
+      XXXXX,  LALT,  LGUI,         LALT, LCTRL, LOWER, SPACE,          ENT, RAISE, RAISE, XXXXX,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B,  MHEN,                       HENK,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX,  LALT,  LGUI,         LALT, EMACS, LOWER, SPACE,          ENT, RAISE, XXXXX, XXXXX,        XXXXX, XXXXX, XXXXX \
+      XXXXX,  LALT,  LGUI,         LALT, EMACS, LOWER, SPACE,          ENT, RAISE, RAISE, XXXXX,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B, LANG2,                      LANG1,     N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
-      XXXXX,  LALT, CMDSP,         LALT,  LCMD, LOWER, SPACE,          ENT, RAISE, XXXXX, XXXXX,        XXXXX, XXXXX, XXXXX \
+      XXXXX,  LALT, CMDSP,         LALT,  LCMD, LOWER, SPACE,          ENT, RAISE, RAISE, XXXXX,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
   ),
 
@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       _____,  HOME, CTRLS,   DEL, RIGHT, CTRLF,  BSPC,                      XXXXX,  BSPC, _____, _____, CTRLL, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT,  MHEN,                      XXXXX,  DOWN, _____, _____, _____, _____, _____,\
+      _____, CTRLZ, CTRLX, CTRLC, CTRLV,  LEFT,  MHEN,                      _____,  DOWN, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX, _____, _____,        _____, _____, _____, _____,        CTREN, _____, _____, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       _____,  HOME, CTRLS,   DEL,  PLUS,  LBRC,  BSPC,                      XXXXX,  RBRC, MINUS,   EQL, _____,  COLN,   DQT,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, CTRLZ, CTRLX, CTRLC,   EQL,  LCBR,  MHEN,                      XXXXX,  RCBR,  UNDS, _____, _____,  QUES, _____,\
+      _____, CTRLZ, CTRLX, CTRLC,   EQL,  LCBR,  MHEN,                      _____,  RCBR,  UNDS, _____, _____,  QUES, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX, _____, _____,        _____, _____, _____,   ENT,        SFENT, _____, _____, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -157,7 +157,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       _____,   F11,   F12, _____, _____, _____, _____,                      XXXXX, _____, _____,    UP, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____,  MPRV,  MPLY,  MNXT, _____, _____, _____,                      XXXXX, _____,  LEFT,  DOWN, RIGHT, _____, _____,\
+      _____,  MPRV,  MPLY,  MNXT, _____, _____, _____,                      _____, _____,  LEFT,  DOWN, RIGHT, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX, _____, _____,        _____, _____, _____, _____,        _____, _____, _____, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -171,7 +171,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------|
       _____, _____, _____, _____, _____, _____, _____,                      XXXXX, _____, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+------|      |------+------+------+------+------+------+------+------|
-      _____, _____, _____, _____, _____, _____, _____,                      XXXXX, _____, _____, _____, _____, _____, _____,\
+      _____, _____, _____, _____, _____, _____, _____,                      _____, _____, _____, _____, _____, _____, _____,\
   //|------+------+------+------+------+------+------+      |      |      +------+------+------+------+------+------+------|
       XXXXX, _____, _____,        _____, _____, _____, _____,        _____, _____, _____, _____,        XXXXX, XXXXX, XXXXX \
   //`-------------------------------------------------------'      `-------------------------------------------------------'
@@ -192,18 +192,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case WIN__:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_WIN__);
-      }
-      return false;
-      break;
-    case MAC__:
-      if (record->event.pressed) {
-        set_single_persistent_default_layer(_MAC__);
+        rgblight_setrgb_blue();
       }
       return false;
       break;
     case GAME_:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_GAME_);
+        rgblight_setrgb_red();
+      }
+      return false;
+      break;
+    case MAC__:
+      if (record->event.pressed) {
+        set_single_persistent_default_layer(_MAC__);
+        rgblight_setrgb_white();
       }
       return false;
       break;
@@ -251,40 +254,36 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-#define RGBLIGHT_COLOR_LAYER_EMACS 0xFF, 0x00, 0x00
-#define RGBLIGHT_COLOR_LAYER_LOWER 0x00, 0x00, 0xFF
-#define RGBLIGHT_COLOR_LAYER_RAISE 0x00, 0xFF, 0x00
-#define RGBLIGHT_COLOR_LAYER_ADJUST 0x00, 0xFF, 0xFF
+#define RGBLIGHT_COLOR_LAYER_DEFAULT    0x00, 0x00, 0x00
+#define RGBLIGHT_COLOR_LAYER_EMACS      0xFF, 0x00, 0x00
+#define RGBLIGHT_COLOR_LAYER_LOWER      0x00, 0x00, 0xFF
+#define RGBLIGHT_COLOR_LAYER_RAISE      0x00, 0xFF, 0x00
+#define RGBLIGHT_COLOR_LAYER_ADJUST     0x00, 0xFF, 0xFF
 
 uint32_t layer_state_set_user(uint32_t state)
 {
   state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
   uint8_t layer = biton32(state);
-  switch (layer)
-  {
-  case _EMACS:
-#ifdef RGBLIGHT_COLOR_LAYER_EMACS
-    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_EMACS);
-#endif
-    break;
-  case _LOWER:
-#ifdef RGBLIGHT_COLOR_LAYER_LOWER
-    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_LOWER);
-#endif
-    break;
-  case _RAISE:
-#ifdef RGBLIGHT_COLOR_LAYER_RAISE
-    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_RAISE);
-#endif
-    break;
-  case _ADJUST:
-#ifdef RGBLIGHT_COLOR_LAYER_ADJUST
-    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_ADJUST);
-#endif
-    break;
+  switch (layer) {
+      case _EMACS:
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_EMACS);
+          break;
 
-  default:
-    break;
+      case _LOWER:
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_LOWER);
+          break;
+
+      case _RAISE:
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_RAISE);
+          break;
+
+      case _ADJUST:
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_ADJUST);
+          break;
+
+      default:
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_DEFAULT);
+          break;
   }
   return state;
 };
